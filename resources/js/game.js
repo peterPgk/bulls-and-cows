@@ -35,9 +35,9 @@ export default () => ({
     },
 
     init() {
-        this.fetchUrl = process.env.MIX_URL || 'http://nuvei.test';
+        this.fetchUrl = process.env.MIX_URL || 'http://bulls-and-cows.test';
         this.storageName = process.env.MIX_STORAGE_NAME || 'nuveiGame';
-        axios.defaults.baseURL = process.env.MIX_URL || 'http://nuvei.test';
+        axios.defaults.baseURL = this.fetchUrl;
 
         //Check if user is already logged in and have game started
         if (! isEmpty(startedGameData)) {
@@ -138,9 +138,7 @@ export default () => ({
                 this.state = 'complete';
                 localStorage.setItem(`${this.storageKey}State`, this.state)
                 this.storeResult()
-                    .then(() => {
-                        //
-                    }
+                    .then(() => {}
                 );
             }
 

@@ -5150,9 +5150,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
 
     init: function init() {
-      this.fetchUrl = "http://nuvei.test" || 0;
+      this.fetchUrl = "http://bulls-and-cows.test" || 0;
       this.storageName = "nuveiGame" || 0;
-      axios.defaults.baseURL = "http://nuvei.test" || 0; //Check if user is already logged in and have game started
+      axios.defaults.baseURL = this.fetchUrl; //Check if user is already logged in and have game started
 
       if (!(0,lodash__WEBPACK_IMPORTED_MODULE_0__.isEmpty)(startedGameData)) {
         this.data = _objectSpread(_objectSpread({}, this.data), startedGameData);
@@ -5326,8 +5326,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         if (this.currentGuess === this.number) {
           this.state = 'complete';
           localStorage.setItem("".concat(this.storageKey, "State"), this.state);
-          this.storeResult().then(function () {//
-          });
+          this.storeResult().then(function () {});
         }
 
         this.currentGuess = '';
