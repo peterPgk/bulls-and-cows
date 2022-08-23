@@ -36,3 +36,7 @@ The idea behind this is BE and FE implementations to be used equally for this te
 
 ### Tests
 Most of the BE is covered with tests.
+
+### TODO
+- Store the number guessed in the database
+- Store the time for guessing the number
