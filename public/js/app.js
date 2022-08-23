@@ -5342,7 +5342,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     },
     clearStorage: function clearStorage() {
-      console.log("clearStorage");
       localStorage.removeItem("".concat(this.storageKey, "Attempts"));
       localStorage.removeItem("".concat(this.storageKey, "State"));
     }

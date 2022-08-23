@@ -156,7 +156,6 @@ export default () => ({
     },
 
     clearStorage() {
-        console.log("clearStorage");
         localStorage.removeItem(`${this.storageKey}Attempts`);
         localStorage.removeItem(`${this.storageKey}State`);
     }

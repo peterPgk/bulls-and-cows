@@ -24,12 +24,9 @@ class GameService
         $this->statsGenerator = $statsGenerator;
     }
 
-    public function generateData()
+    public function generateData(): array
     {
         $number = app(NumbersGeneratorInterface::class)->generate(config('game.digits'));
-//        $statsGenerator = app(GameStatisticsInterface::class);
-
-        $number = '1214';
 
         $mainStat = $this->statsGenerator->general();
         $userStat = $this->statsGenerator->forUser($this->forUser);
